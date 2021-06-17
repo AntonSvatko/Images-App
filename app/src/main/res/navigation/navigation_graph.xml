@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph.xml"
+    app:startDestination="@id/popular">
+    <fragment
+        android:id="@+id/popular"
+        android:name="com.tony.imagemvvm.ui.fragments.popular.PopularFragment"
+        android:label="Popular Images">
+        <action
+            android:id="@+id/action_popularFragment_to_detailsFragment"
+            app:destination="@id/details" />
+    </fragment>
+    <fragment
+        android:id="@+id/details"
+        android:name="com.tony.imagemvvm.ui.fragments.details.DetailsFragment"
+        android:label="Details">
+        <argument
+            android:name="photo"
+            app:argType="com.tony.imagemvvm.network.data.vo.Photo" />
+    </fragment>
+</navigation>

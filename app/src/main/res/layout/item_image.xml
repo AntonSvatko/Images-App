@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="photo"
+            type="com.tony.imagemvvm.network.data.vo.Photo" />
+
+        <variable
+            name="picasso"
+            type="com.squareup.picasso.Picasso" />
+    </data>
+
+    <com.tony.imagemvvm.ui.squareview.SquareLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            app:photo="@{photo}"
+            app:picasso="@{picasso}"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:onClick="@{clickListener}"
+            android:transitionName="@{@string/transition_photo(photo.id)}"
+            android:layout_height="match_parent"/>
+    </com.tony.imagemvvm.ui.squareview.SquareLayout>
+</layout>

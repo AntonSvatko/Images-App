@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.tony.imagemvvm.ui.adapter.ImagesAdapter" />
+
+        <variable
+            name="viewModel"
+            type="com.tony.imagemvvm.ui.fragments.popular.PopularViewModel" />
+
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/veryDarkGray"
+            android:indeterminateTintMode="src_in"
+            android:maxHeight="6dp"
+            android:minHeight="6dp"
+            app:toast="@{viewModel.toastFailedLiveData}"
+            app:isProgress="@{viewModel.loading}" />
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="popular"
+            android:imeOptions="actionDone"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingStart="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{adapter}"
+            android:id="@+id/popular_recycler_view"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:photosList="@{viewModel.photosLiveData}"
+            app:spanCount="3" />
+    </LinearLayout>
+
+
+</layout>
