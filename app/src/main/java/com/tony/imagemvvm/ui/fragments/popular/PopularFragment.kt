@@ -2,9 +2,7 @@ package com.tony.imagemvvm.ui.fragments.popular
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.inputmethod.EditorInfo
 import android.widget.EditText
-import android.widget.TextView.OnEditorActionListener
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.squareup.picasso.Picasso
@@ -14,8 +12,7 @@ import com.tony.imagemvvm.functions.*
 import com.tony.imagemvvm.network.data.vo.size.SizesParcelableData
 import com.tony.imagemvvm.ui.adapter.ImagesAdapter
 import com.tony.imagemvvm.ui.base.fragment.BaseFragment
-import com.tony.imagemvvm.ui.fragments.factory.ViewModelFactory
-import kotlinx.android.synthetic.main.fragment_popular.*
+import com.tony.imagemvvm.ui.factory.ViewModelFactory
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.launch

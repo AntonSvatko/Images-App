@@ -1,4 +1,4 @@
-package com.tony.imagemvvm.ui.fragments.factory
+package com.tony.imagemvvm.ui.factory
 
 import android.content.Context
 import android.text.Editable

@@ -14,7 +14,7 @@ import com.tony.imagemvvm.functions.createPhotoIntent
 import com.tony.imagemvvm.functions.createSizesIntent
 import com.tony.imagemvvm.functions.validate
 import com.tony.imagemvvm.ui.base.fragment.BaseFragment
-import com.tony.imagemvvm.ui.fragments.factory.ViewModelFactory
+import com.tony.imagemvvm.ui.factory.ViewModelFactory
 
 class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_details) {
     lateinit var localManager: LocalBroadcastManager
