@@ -39,7 +39,7 @@ class PopularViewModel(
     suspend fun getPhotos(text: String) {
         needUpdate(text)
 
-
+        Log.d("test2", "t2= $text")
         withContext(Dispatchers.Main) {
             val value = when (val result = photoClient.fetchPhotos(text)) {
                 is ResultOf.Success -> result.data
@@ -64,7 +64,7 @@ class PopularViewModel(
     }
 
     private fun needUpdate(text: String) {
-        if (text != "" && text != tempText) {
+        if (text != tempText) {
             photosLiveData.postValue(emptyList())
             check = true
             isFirst = false
