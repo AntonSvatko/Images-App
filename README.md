@@ -5,7 +5,7 @@ In the main menu of Images App(MVVM) you can see popular photos, and at the top 
 # Api Flickr
 
 ##### You can see an example below:
-![](https://media.giphy.com/media/IYWhZGcxP30CiABWuf/giphy.gif)
+![alt text](https://media.giphy.com/media/IYWhZGcxP30CiABWuf/giphy.gif "Logo Title Text 1")
 
 ### Libraries
 There is a list of used libraries: 
