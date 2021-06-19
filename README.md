@@ -2,11 +2,11 @@
 
 In the main menu of Images App(MVVM) you can see popular photos, and at the top of the screen you can use search to find photos by keyword.
 
-# Api Flickr
-
 ##### You can see an example below:
-![alt text](https://media.giphy.com/media/IYWhZGcxP30CiABWuf/giphy.gif "Logo Title Text 1")
+![Animated GIF-downsized_large](https://user-images.githubusercontent.com/70888241/122653492-8a6cb880-d14d-11eb-9d69-7da13e92806f.gif)
 
+# Api 
+Flickr is an American image hosting.
 ### Libraries
 There is a list of used libraries: 
 - Lifecycle
